@@ -1,5 +1,5 @@
 CREATE TABLE estateAgent (
-    ID int not null,
+    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     name varchar(50) not null,
     address varchar(50),
     login varchar(50),
@@ -8,7 +8,7 @@ CREATE TABLE estateAgent (
 );
 
 CREATE TABLE person (
-    ID int not null,
+    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     firstname varchar(50),
     name varchar(50) not null,
     address varchar(100),
@@ -16,7 +16,7 @@ CREATE TABLE person (
 );
 
 CREATE TABLE estate (
-    ID int not null,
+    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     city varchar(50),
     postalcode int,
     street varchar(50),
@@ -28,7 +28,7 @@ CREATE TABLE estate (
 );
 
 CREATE TABLE apartment (
-    ID int not null,
+    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     floor int,
     rent double,
     rooms int,
@@ -39,7 +39,7 @@ CREATE TABLE apartment (
 );
 
 CREATE TABLE house (
-    ID int not null,
+    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     floors int,
     price double,
     garden SMALLINT,
@@ -48,7 +48,7 @@ CREATE TABLE house (
 );
 
 CREATE TABLE contract (
-    contractNo int not null,	
+    contractNo int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
     Date date,
     place varchar(50),
     primary key (contractNo)
