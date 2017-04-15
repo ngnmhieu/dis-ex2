@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * @author ngnmhieu
  * @since 15.04.17
  */
-public class Contract
+abstract public class Contract
 {
     // contract number
     private Integer contractNo;
