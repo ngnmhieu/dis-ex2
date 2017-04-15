@@ -21,9 +21,13 @@ import java.sql.Statement;
 public class EstateAgent
 {
 	private int id = -1;
+
 	private String name;
+
 	private String address;
+
 	private String login;
+
 	private String password;
 
 	public int getId() {

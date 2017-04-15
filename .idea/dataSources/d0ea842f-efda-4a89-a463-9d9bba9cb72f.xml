@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="DB2 - jdbc:db2://vsisls4.informatik.uni-hamburg.de:50001/VSISP">
+  <database-model serializer="dbm" rdbms="DB2" format-version="2.6">
+    <schema id="1" name="VSISP49">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="DB2INST1"/>
+    <schema id="3" name="NULLID"/>
+    <schema id="4" name="SQLJ"/>
+    <schema id="5" name="SYSCAT"/>
+    <schema id="6" name="SYSFUN"/>
+    <schema id="7" name="SYSIBM"/>
+    <schema id="8" name="SYSIBMADM"/>
+    <schema id="9" name="SYSIBMINTERNAL"/>
+    <schema id="10" name="SYSIBMTS"/>
+    <schema id="11" name="SYSPROC"/>
+    <schema id="12" name="SYSPUBLIC"/>
+    <schema id="13" name="SYSSTAT"/>
+    <schema id="14" name="SYSTOOLS"/>
+    <schema id="15" name="VSISP00"/>
+    <schema id="16" name="VSISP01"/>
+    <schema id="17" name="VSISP02"/>
+    <schema id="18" name="VSISP03"/>
+    <schema id="19" name="VSISP04"/>
+    <schema id="20" name="VSISP05"/>
+    <schema id="21" name="VSISP06"/>
+    <schema id="22" name="VSISP07"/>
+    <schema id="23" name="VSISP08"/>
+    <schema id="24" name="VSISP09"/>
+    <schema id="25" name="VSISP10"/>
+    <schema id="26" name="VSISP11"/>
+    <schema id="27" name="VSISP12"/>
+    <schema id="28" name="VSISP13"/>
+    <schema id="29" name="VSISP14"/>
+    <schema id="30" name="VSISP15"/>
+    <schema id="31" name="VSISP16"/>
+    <schema id="32" name="VSISP17"/>
+    <schema id="33" name="VSISP18"/>
+    <schema id="34" name="VSISP19"/>
+    <schema id="35" name="VSISP20"/>
+    <schema id="36" name="VSISP21"/>
+    <schema id="37" name="VSISP22"/>
+    <schema id="38" name="VSISP23"/>
+    <schema id="39" name="VSISP24"/>
+    <schema id="40" name="VSISP25"/>
+    <schema id="41" name="VSISP26"/>
+    <schema id="42" name="VSISP27"/>
+    <schema id="43" name="VSISP28"/>
+    <schema id="44" name="VSISP29"/>
+    <schema id="45" name="VSISP30"/>
+    <schema id="46" name="VSISP31"/>
+    <schema id="47" name="VSISP32"/>
+    <schema id="48" name="VSISP33"/>
+    <schema id="49" name="VSISP34"/>
+    <schema id="50" name="VSISP35"/>
+    <schema id="51" name="VSISP36"/>
+    <schema id="52" name="VSISP37"/>
+    <schema id="53" name="VSISP38"/>
+    <schema id="54" name="VSISP39"/>
+    <schema id="55" name="VSISP40"/>
+    <schema id="56" name="VSISP41"/>
+    <schema id="57" name="VSISP42"/>
+    <schema id="58" name="VSISP43"/>
+    <schema id="59" name="VSISP44"/>
+    <schema id="60" name="VSISP45"/>
+    <schema id="61" name="VSISP46"/>
+    <schema id="62" name="VSISP47"/>
+    <schema id="63" name="VSISP48"/>
+    <schema id="64" name="VSISP50"/>
+    <schema id="65" name="VSISP51"/>
+    <schema id="66" name="VSISP52"/>
+    <schema id="67" name="VSISP53"/>
+    <schema id="68" name="VSISP54"/>
+    <schema id="69" name="VSISP55"/>
+    <schema id="70" name="VSISP56"/>
+    <schema id="71" name="VSISP57"/>
+    <schema id="72" name="VSISP58"/>
+    <schema id="73" name="VSISP59"/>
+    <schema id="74" name="VSISP60"/>
+    <schema id="75" name="VSISP61"/>
+    <schema id="76" name="VSISP62"/>
+    <schema id="77" name="VSISP63"/>
+    <schema id="78" name="VSISP64"/>
+    <schema id="79" name="VSISP65"/>
+    <schema id="80" name="VSISP66"/>
+    <schema id="81" name="VSISP67"/>
+    <schema id="82" name="VSISP68"/>
+    <schema id="83" name="VSISP69"/>
+    <schema id="84" name="VSISP70"/>
+    <schema id="85" name="VSISP71"/>
+    <schema id="86" name="VSISP72"/>
+    <schema id="87" name="VSISP73"/>
+    <schema id="88" name="VSISP74"/>
+    <schema id="89" name="VSISP75"/>
+    <schema id="90" name="VSISP76"/>
+    <schema id="91" name="VSISP77"/>
+    <schema id="92" name="VSISP78"/>
+    <schema id="93" name="VSISP79"/>
+    <schema id="94" name="VSISP80"/>
+    <schema id="95" name="VSISP81"/>
+    <schema id="96" name="VSISP82"/>
+    <schema id="97" name="VSISP83"/>
+    <schema id="98" name="VSISP84"/>
+    <schema id="99" name="VSISP85"/>
+    <schema id="100" name="VSISP86"/>
+    <schema id="101" name="VSISP87"/>
+    <schema id="102" name="VSISP88"/>
+    <schema id="103" name="VSISP89"/>
+    <schema id="104" name="VSISP90"/>
+    <schema id="105" name="VSISP91"/>
+    <schema id="106" name="VSISP92"/>
+    <schema id="107" name="VSISP93"/>
+    <schema id="108" name="VSISP94"/>
+    <schema id="109" name="VSISP95"/>
+    <schema id="110" name="VSISP96"/>
+    <schema id="111" name="VSISP97"/>
+    <schema id="112" name="VSISP98"/>
+    <schema id="113" name="VSISP99"/>
+    <table id="114" parent="1" name="APARTMENT"/>
+    <table id="115" parent="1" name="CONTRACT"/>
+    <table id="116" parent="1" name="ESTATE"/>
+    <table id="117" parent="1" name="ESTATEAGENT"/>
+    <table id="118" parent="1" name="HOUSE"/>
+    <table id="119" parent="1" name="PERSON"/>
+    <table id="120" parent="1" name="PURCHASECONTRACT"/>
+    <table id="121" parent="1" name="TENANCYCONTRACT"/>
+    <table id="122" parent="1" name="USERS"/>
+    <column id="123" parent="114" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="124" parent="114" name="FLOOR">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="125" parent="114" name="RENT">
+      <data-type>DOUBLE(53)|8</data-type>
+    </column>
+    <column id="126" parent="114" name="ROOMS">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="127" parent="114" name="BALCONY">
+      <data-type>SMALLINT(5)|5</data-type>
+    </column>
+    <column id="128" parent="114" name="BUILTINKITCHEN">
+      <data-type>SMALLINT(5)|5</data-type>
+    </column>
+    <key id="129" parent="114" name="SQL170411180937140">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="130" parent="114" name="SQL170411180937380">
+      <columns>ID</columns>
+      <ref-key>~.ESTATE.SQL170411180935450</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="131" parent="115" name="CONTRACTNO">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="132" parent="115" name="DATE">
+      <data-type>DATE(10)|91</data-type>
+    </column>
+    <column id="133" parent="115" name="PLACE">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <key id="134" parent="115" name="SQL170411180940610">
+      <columns>CONTRACTNO</columns>
+      <primary>1</primary>
+    </key>
+    <column id="135" parent="116" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="136" parent="116" name="CITY">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="137" parent="116" name="POSTALCODE">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="138" parent="116" name="STREET">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="139" parent="116" name="STREETNUMBER">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="140" parent="116" name="SQUAREAREA">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="141" parent="116" name="AGENTID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <key id="142" parent="116" name="SQL170411180935450">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="143" parent="116" name="SQL170411180935680">
+      <columns>AGENTID</columns>
+      <ref-key>~.ESTATEAGENT.SQL170411180932330</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="144" parent="117" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="145" parent="117" name="NAME">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="146" parent="117" name="ADDRESS">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="147" parent="117" name="LOGIN">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="148" parent="117" name="PASSWORD">
+      <data-type>VARCHAR(64)|12</data-type>
+    </column>
+    <key id="149" parent="117" name="SQL170411180932330">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="150" parent="118" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="151" parent="118" name="FLOORS">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="152" parent="118" name="PRICE">
+      <data-type>DOUBLE(53)|8</data-type>
+    </column>
+    <column id="153" parent="118" name="GARDEN">
+      <data-type>SMALLINT(5)|5</data-type>
+    </column>
+    <key id="154" parent="118" name="SQL170411180938890">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="155" parent="118" name="SQL170411180939060">
+      <columns>ID</columns>
+      <ref-key>~.ESTATE.SQL170411180935450</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="156" parent="119" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="157" parent="119" name="FIRSTNAME">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="158" parent="119" name="NAME">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="159" parent="119" name="ADDRESS">
+      <data-type>VARCHAR(100)|12</data-type>
+    </column>
+    <key id="160" parent="119" name="SQL170411180933780">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="161" parent="120" name="CONTRACTNO">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="162" parent="120" name="NOOFINSTALLMENTS">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="163" parent="120" name="INTRESTRATE">
+      <data-type>DOUBLE(53)|8</data-type>
+    </column>
+    <column id="164" parent="120" name="HOUSEID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="165" parent="120" name="OWNERID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <key id="166" parent="120" name="SQL170411181326120">
+      <columns>CONTRACTNO</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="167" parent="120" name="SQL170411181326340">
+      <columns>CONTRACTNO</columns>
+      <ref-key>~.CONTRACT.SQL170411180940610</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="168" parent="120" name="SQL170411181326580">
+      <columns>HOUSEID</columns>
+      <ref-key>~.HOUSE.SQL170411180938890</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="169" parent="120" name="SQL170411181326800">
+      <columns>OWNERID</columns>
+      <ref-key>~.PERSON.SQL170411180933780</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="170" parent="121" name="CONTRACTNO">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="171" parent="121" name="STARTDATE">
+      <data-type>DATE(10)|91</data-type>
+    </column>
+    <column id="172" parent="121" name="DURATION">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="173" parent="121" name="APARTMENTID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="174" parent="121" name="ADDITIONALCOSTS">
+      <data-type>DOUBLE(53)|8</data-type>
+    </column>
+    <column id="175" parent="121" name="RENTERID">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <key id="176" parent="121" name="SQL170411180942170">
+      <columns>CONTRACTNO</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="177" parent="121" name="SQL170411180942360">
+      <columns>CONTRACTNO</columns>
+      <ref-key>~.CONTRACT.SQL170411180940610</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="178" parent="121" name="SQL170411180943370">
+      <columns>APARTMENTID</columns>
+      <ref-key>~.APARTMENT.SQL170411180937140</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="179" parent="121" name="SQL170411180942600">
+      <columns>RENTERID</columns>
+      <ref-key>~.PERSON.SQL170411180933780</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="180" parent="122" name="ID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="181" parent="122" name="NAME">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(20)|12</data-type>
+    </column>
+    <column id="182" parent="122" name="SCORE">
+      <mandatory>1</mandatory>
+      <data-type>DECIMAL(20,2)|3</data-type>
+    </column>
+    <key id="183" parent="122" name="SQL170404172840020">
+      <columns>ID</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

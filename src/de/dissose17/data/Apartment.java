@@ -6,14 +6,19 @@ package de.dissose17.data;
  */
 public class Apartment extends Estate
 {
+    // on which floor
     private int floor;
 
+    // rent price
     private double rentPrice;
 
+    // number of rooms
     private int numRooms;
 
+    // does it has a balcony
     private boolean hasBalcony;
 
+    // does it has a built-in kitchen
     private boolean hasBuiltInKitchen;
 
     public Apartment(Integer id, String city, int postalCode, String street, int streetNumber, int squareArea, EstateAgent agent, int floor, double rentPrice, int numRooms, boolean hasBalcony, boolean hasBuiltInKitchen)
