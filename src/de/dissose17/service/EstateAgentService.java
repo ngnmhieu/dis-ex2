@@ -35,7 +35,7 @@ public class EstateAgentService
      * @param id ID of the agent
      * @return EstateAgent instance
      */
-    private EstateAgent load(int id)
+    public EstateAgent getEstateAgent(int id)
     {
         try {
             // Erzeuge Anfrage
@@ -85,11 +85,11 @@ public class EstateAgentService
             if (isInsert) {
                 ResultSet rs = stm.getGeneratedKeys();
                 if (rs.next()) {
-                    updatedAgent = load(rs.getInt(1));
+                    updatedAgent = getEstateAgent(rs.getInt(1));
                 }
                 rs.close();
             } else {
-                updatedAgent = load(agent.getId());
+                updatedAgent = getEstateAgent(agent.getId());
             }
             stm.close();
         } catch (SQLException e) {

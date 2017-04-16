@@ -28,7 +28,7 @@ CREATE TABLE estate (
 );
 
 CREATE TABLE apartment (
-    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
+    ID int NOT NULL,
     floor int,
     rent double,
     rooms int,
@@ -39,7 +39,7 @@ CREATE TABLE apartment (
 );
 
 CREATE TABLE house (
-    ID int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1, NO CACHE),
+    ID int NOT NULL,
     floors int,
     price double,
     garden SMALLINT,
