@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
  * @author ngnmhieu
  * @since 16.04.17
  */
-public class EstateServiceTest
+public class EstateServiceTest extends DBTest
 {
     private EstateService service;
 
@@ -34,15 +34,6 @@ public class EstateServiceTest
         EstateAgentService agentService = new EstateAgentService();
         agent1 = agentService.createAccount("Max", "Kielort", "maxagent", "max12345");
         agent2 = agentService.createAccount("Toni", "Wattkorn", "toniagent", "toni12345");
-    }
-
-    @After
-    public void clean() throws SQLException
-    {
-        Connection conn = DB2ConnectionManager.getInstance().getConnection();
-        conn.createStatement().executeUpdate("DELETE FROM HOUSE");
-        conn.createStatement().executeUpdate("DELETE FROM APARTMENT");
-        conn.createStatement().executeUpdate("DELETE FROM ESTATE");
     }
 
     @Test

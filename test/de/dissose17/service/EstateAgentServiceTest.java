@@ -17,21 +17,14 @@ import static org.junit.Assert.*;
  * @author ngnmhieu
  * @since 15.04.17
  */
-public class EstateAgentServiceTest
+public class EstateAgentServiceTest extends DBTest
 {
     private EstateAgentService service;
 
     @Before
-    public void setup()
+    public void setup() throws SQLException
     {
         service = new EstateAgentService();
-    }
-
-    @After
-    public void clean() throws SQLException
-    {
-        Connection conn = DB2ConnectionManager.getInstance().getConnection();
-        conn.createStatement().executeUpdate("DELETE FROM ESTATEAGENT");
     }
 
     @Test

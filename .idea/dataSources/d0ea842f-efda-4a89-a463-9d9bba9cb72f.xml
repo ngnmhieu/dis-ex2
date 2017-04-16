@@ -144,19 +144,20 @@
     <column id="128" parent="114" name="BUILTINKITCHEN">
       <data-type>SMALLINT(5)|5</data-type>
     </column>
-    <key id="129" parent="114" name="SQL170411180937140">
+    <key id="129" parent="114" name="SQL170416020621910">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="130" parent="114" name="SQL170411180937380">
+    <foreign-key id="130" parent="114" name="SQL170416020622120">
       <columns>ID</columns>
-      <ref-key>~.ESTATE.SQL170411180935450</ref-key>
+      <ref-key>~.ESTATE.SQL170416020620230</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
     <column id="131" parent="115" name="CONTRACTNO">
       <mandatory>1</mandatory>
       <data-type>INTEGER(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
     <column id="132" parent="115" name="DATE">
       <data-type>DATE(10)|91</data-type>
@@ -164,13 +165,14 @@
     <column id="133" parent="115" name="PLACE">
       <data-type>VARCHAR(50)|12</data-type>
     </column>
-    <key id="134" parent="115" name="SQL170411180940610">
+    <key id="134" parent="115" name="SQL170416020625530">
       <columns>CONTRACTNO</columns>
       <primary>1</primary>
     </key>
     <column id="135" parent="116" name="ID">
       <mandatory>1</mandatory>
       <data-type>INTEGER(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
     <column id="136" parent="116" name="CITY">
       <data-type>VARCHAR(50)|12</data-type>
@@ -191,19 +193,20 @@
       <mandatory>1</mandatory>
       <data-type>INTEGER(10)|4</data-type>
     </column>
-    <key id="142" parent="116" name="SQL170411180935450">
+    <key id="142" parent="116" name="SQL170416020620230">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="143" parent="116" name="SQL170411180935680">
+    <foreign-key id="143" parent="116" name="SQL170416020620440">
       <columns>AGENTID</columns>
-      <ref-key>~.ESTATEAGENT.SQL170411180932330</ref-key>
+      <ref-key>~.ESTATEAGENT.SQL170416020616940</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
     <column id="144" parent="117" name="ID">
       <mandatory>1</mandatory>
       <data-type>INTEGER(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
     <column id="145" parent="117" name="NAME">
       <mandatory>1</mandatory>
@@ -218,7 +221,7 @@
     <column id="148" parent="117" name="PASSWORD">
       <data-type>VARCHAR(64)|12</data-type>
     </column>
-    <key id="149" parent="117" name="SQL170411180932330">
+    <key id="149" parent="117" name="SQL170416020616940">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
@@ -235,19 +238,20 @@
     <column id="153" parent="118" name="GARDEN">
       <data-type>SMALLINT(5)|5</data-type>
     </column>
-    <key id="154" parent="118" name="SQL170411180938890">
+    <key id="154" parent="118" name="SQL170416020623650">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="155" parent="118" name="SQL170411180939060">
+    <foreign-key id="155" parent="118" name="SQL170416020623900">
       <columns>ID</columns>
-      <ref-key>~.ESTATE.SQL170411180935450</ref-key>
+      <ref-key>~.ESTATE.SQL170416020620230</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
     <column id="156" parent="119" name="ID">
       <mandatory>1</mandatory>
       <data-type>INTEGER(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
     <column id="157" parent="119" name="FIRSTNAME">
       <data-type>VARCHAR(50)|12</data-type>
@@ -259,7 +263,7 @@
     <column id="159" parent="119" name="ADDRESS">
       <data-type>VARCHAR(100)|12</data-type>
     </column>
-    <key id="160" parent="119" name="SQL170411180933780">
+    <key id="160" parent="119" name="SQL170416020618550">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
@@ -270,36 +274,36 @@
     <column id="162" parent="120" name="NOOFINSTALLMENTS">
       <data-type>INTEGER(10)|4</data-type>
     </column>
-    <column id="163" parent="120" name="INTRESTRATE">
+    <column id="163" parent="120" name="HOUSEID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="164" parent="120" name="OWNERID">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="165" parent="120" name="INTERESTRATE">
       <data-type>DOUBLE(53)|8</data-type>
     </column>
-    <column id="164" parent="120" name="HOUSEID">
-      <mandatory>1</mandatory>
-      <data-type>INTEGER(10)|4</data-type>
-    </column>
-    <column id="165" parent="120" name="OWNERID">
-      <mandatory>1</mandatory>
-      <data-type>INTEGER(10)|4</data-type>
-    </column>
-    <key id="166" parent="120" name="SQL170411181326120">
+    <key id="166" parent="120" name="SQL170416020629100">
       <columns>CONTRACTNO</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="167" parent="120" name="SQL170411181326340">
+    <foreign-key id="167" parent="120" name="SQL170416020629340">
       <columns>CONTRACTNO</columns>
-      <ref-key>~.CONTRACT.SQL170411180940610</ref-key>
+      <ref-key>~.CONTRACT.SQL170416020625530</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="168" parent="120" name="SQL170411181326580">
+    <foreign-key id="168" parent="120" name="SQL170416020629680">
       <columns>HOUSEID</columns>
-      <ref-key>~.HOUSE.SQL170411180938890</ref-key>
+      <ref-key>~.HOUSE.SQL170416020623650</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="169" parent="120" name="SQL170411181326800">
+    <foreign-key id="169" parent="120" name="SQL170416020629900">
       <columns>OWNERID</columns>
-      <ref-key>~.PERSON.SQL170411180933780</ref-key>
+      <ref-key>~.PERSON.SQL170416020618550</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
@@ -318,30 +322,30 @@
       <data-type>INTEGER(10)|4</data-type>
     </column>
     <column id="174" parent="121" name="ADDITIONALCOSTS">
-      <data-type>DOUBLE(53)|8</data-type>
+      <data-type>INTEGER(10)|4</data-type>
     </column>
     <column id="175" parent="121" name="RENTERID">
       <data-type>INTEGER(10)|4</data-type>
     </column>
-    <key id="176" parent="121" name="SQL170411180942170">
+    <key id="176" parent="121" name="SQL170416020627050">
       <columns>CONTRACTNO</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="177" parent="121" name="SQL170411180942360">
+    <foreign-key id="177" parent="121" name="SQL170416020627250">
       <columns>CONTRACTNO</columns>
-      <ref-key>~.CONTRACT.SQL170411180940610</ref-key>
+      <ref-key>~.CONTRACT.SQL170416020625530</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="178" parent="121" name="SQL170411180943370">
+    <foreign-key id="178" parent="121" name="SQL170416020627660">
       <columns>APARTMENTID</columns>
-      <ref-key>~.APARTMENT.SQL170411180937140</ref-key>
+      <ref-key>~.APARTMENT.SQL170416020621910</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="179" parent="121" name="SQL170411180942600">
+    <foreign-key id="179" parent="121" name="SQL170416020627450">
       <columns>RENTERID</columns>
-      <ref-key>~.PERSON.SQL170411180933780</ref-key>
+      <ref-key>~.PERSON.SQL170416020618550</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>

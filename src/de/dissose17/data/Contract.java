@@ -1,6 +1,6 @@
 package de.dissose17.data;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 /**
  * @author ngnmhieu
@@ -12,18 +12,18 @@ abstract public class Contract
     private Integer contractNo;
 
     // contract date
-    private LocalDate date;
+    private Date date;
 
     // settlement place
     private String place;
 
-    public Contract(Integer contractNo, LocalDate date, String place)
+    public Contract(Integer contractNo, Date date, String place)
     {
         this(date, place);
         this.contractNo = contractNo;
     }
 
-    public Contract(LocalDate date, String place)
+    public Contract(Date date, String place)
     {
         this.date = date;
         this.place = place;
@@ -39,12 +39,12 @@ abstract public class Contract
         this.contractNo = contractNo;
     }
 
-    public LocalDate getDate()
+    public Date getDate()
     {
         return date;
     }
 
-    public void setDate(LocalDate date)
+    public void setDate(Date date)
     {
         this.date = date;
     }

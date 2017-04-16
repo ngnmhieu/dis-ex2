@@ -1,6 +1,6 @@
 package de.dissose17.data;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 /**
  * @author ngnmhieu
@@ -20,7 +20,7 @@ public class PurchaseContract extends Contract
     // the person who buys (or sells) the house
     private Person owner;
 
-    public PurchaseContract(Integer contractNo, LocalDate date, String place, int numInstallments, double interestRate, House house, Person owner)
+    public PurchaseContract(Integer contractNo, Date date, String place, int numInstallments, double interestRate, House house, Person owner)
     {
         super(contractNo, date, place);
         this.numInstallments = numInstallments;
@@ -29,7 +29,7 @@ public class PurchaseContract extends Contract
         this.owner = owner;
     }
 
-    public PurchaseContract(LocalDate date, String place, int numInstallments, double interestRate, House house, Person owner)
+    public PurchaseContract(Date date, String place, int numInstallments, double interestRate, House house, Person owner)
     {
         super(date, place);
         this.numInstallments = numInstallments;

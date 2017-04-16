@@ -20,7 +20,7 @@ import java.sql.Statement;
  */
 public class EstateAgent
 {
-    private Integer id = null;
+    private Integer id;
 
     private String name;
 

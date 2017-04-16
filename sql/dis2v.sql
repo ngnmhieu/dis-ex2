@@ -59,7 +59,7 @@ CREATE TABLE tenancyContract (
     startDate date,
     duration int,
     apartmentID int not null,
-    additionalCosts int,
+    additionalCosts double,
     renterID int,
     primary key(contractNo),
     foreign key (contractNo) references contract(contractNo),
@@ -70,7 +70,7 @@ CREATE TABLE tenancyContract (
 CREATE TABLE purchaseContract (
     contractNo int not null,
     noOfInstallments int,
-    intrestRate double,
+    interestRate double,
     houseID int not null,
     ownerID int not null,
     primary key(contractNo),

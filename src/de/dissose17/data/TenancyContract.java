@@ -1,6 +1,6 @@
 package de.dissose17.data;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 /**
  * @author ngnmhieu
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class TenancyContract extends Contract
 {
     // contract start date
-    private LocalDate startDate;
+    private Date startDate;
 
     // in months
     private int duration;
@@ -23,7 +23,7 @@ public class TenancyContract extends Contract
     // which apartment is rented
     private Apartment apartment;
 
-    public TenancyContract(Integer contractNo, LocalDate date, String place, LocalDate startDate, int duration, double additionalCosts, Person renter, Apartment apartment)
+    public TenancyContract(Integer contractNo, Date date, String place, Date startDate, int duration, double additionalCosts, Person renter, Apartment apartment)
     {
         super(contractNo, date, place);
         this.startDate = startDate;
@@ -33,7 +33,7 @@ public class TenancyContract extends Contract
         this.apartment = apartment;
     }
 
-    public TenancyContract(LocalDate date, String place, LocalDate startDate, int duration, double additionalCosts, Person renter, Apartment apartment)
+    public TenancyContract(Date date, String place, Date startDate, int duration, double additionalCosts, Person renter, Apartment apartment)
     {
         super(date, place);
         this.startDate = startDate;
@@ -43,12 +43,12 @@ public class TenancyContract extends Contract
         this.apartment = apartment;
     }
 
-    public LocalDate getStartDate()
+    public Date getStartDate()
     {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate)
+    public void setStartDate(Date startDate)
     {
         this.startDate = startDate;
     }
