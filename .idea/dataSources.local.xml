@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>vsisp49</user-name>
+      <introspection-schemas>*:VSISP49</introspection-schemas>
       <resolve-scope>:VSISP49</resolve-scope>
+      <unqualified-resolve-schemas>:VSISP49</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
