@@ -34,7 +34,6 @@ public class EstateAgentView {
     private EstateAgentService EAService;
 
     public EstateAgentView() {
-        EAService = new EstateAgentService();
         JFrame frame = new JFrame("EstateAgentView");
         frame.setContentPane(this.panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,17 +44,20 @@ public class EstateAgentView {
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
                 EAService.createAccount(nameTextField.getText(), adressTextField.getText(), loginTextField.getText(), passwordPasswordField.getPassword().toString());
+                addDatatoTable(table1);
             }
         });
         table1.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e)
             {
                 int row = table1.getSelectedRow();
-                tableIDTextField.setText((String) table1.getModel().getValueAt(row, 0));
-                tableNameTextField.setText((String) table1.getModel().getValueAt(row, 1));
-                tableAdressTextField.setText((String) table1.getModel().getValueAt(row, 2));
-                tableLoginTextField.setText((String) table1.getModel().getValueAt(row, 3));
-                tablePasswordTextField.setText((String) table1.getModel().getValueAt(row, 4));
+                if(row < table1.getRowCount() && row >= 0) {
+                    tableIDTextField.setText((String) table1.getModel().getValueAt(row, 0));
+                    tableNameTextField.setText((String) table1.getModel().getValueAt(row, 1));
+                    tableAdressTextField.setText((String) table1.getModel().getValueAt(row, 2));
+                    tableLoginTextField.setText((String) table1.getModel().getValueAt(row, 3));
+                    tablePasswordTextField.setText((String) table1.getModel().getValueAt(row, 4));
+                }
             }
 
         });
@@ -64,7 +66,7 @@ public class EstateAgentView {
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
                 EAService.save(new EstateAgent(Integer.parseInt(tableIDTextField.getText()), tableNameTextField.getText(), tableAdressTextField.getText(), tableLoginTextField.getText(), tablePasswordTextField.getText()));
-
+                addDatatoTable(table1);
             }
         });
         deleteButton.addMouseListener(new MouseAdapter() {
@@ -72,6 +74,7 @@ public class EstateAgentView {
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
                 EAService.delete(new EstateAgent(Integer.parseInt(tableIDTextField.getText()), tableNameTextField.getText(), tableAdressTextField.getText(), tableLoginTextField.getText(), tablePasswordTextField.getText()));
+                addDatatoTable(table1);
             }
         });
     }
@@ -79,7 +82,7 @@ public class EstateAgentView {
     private void createUIComponents() {
         // TODO: place custom component creation code here
         EAService = new EstateAgentService();
-        Vector<EstateAgent> es = EAService.getAllEstateAgent();
+        //Vector<EstateAgent> es = EAService.getAllEstateAgent();
         Vector<String> cols = new Vector<>();
         cols.add("ID");
         cols.add("Name");
@@ -93,7 +96,13 @@ public class EstateAgentView {
                 return false;
             }
         };
-        DefaultTableModel model = (DefaultTableModel) table1.getModel();
+        addDatatoTable(table1);
+    }
+
+    private void addDatatoTable(JTable table) {
+        Vector<EstateAgent> es = EAService.getAllEstateAgent();
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        model.setRowCount(0);
         for(EstateAgent agent : es){
             model.addRow(new String[]{agent.getId().toString(), agent.getName(), agent.getAddress(), agent.getLogin(), agent.getPassword()});
 

@@ -47,8 +47,6 @@ public class Login extends JDialog {
 
     private void onOK() {
         // add your code here
-        System.out.println(this.password);
-        System.out.println(passwordPasswordField.getPassword());
         if(Arrays.equals(this.password, passwordPasswordField.getPassword())) {
             System.out.println("Login successful!");
             dispose();
