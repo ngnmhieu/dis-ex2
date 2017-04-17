@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * @author ngnmhieu
@@ -51,6 +54,30 @@ public class EstateAgentService
                 pstmt.close();
                 return ts;
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Vector<EstateAgent> getAllEstateAgent()
+    {
+        try {
+            // Erzeuge Anfrage
+            String selectSQL = "SELECT * FROM estateagent";
+            PreparedStatement pstmt = conn.prepareStatement(selectSQL);
+
+            // Führe Anfrage aus
+            Vector<EstateAgent>  rsList;
+            rsList = new Vector<EstateAgent>();
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                EstateAgent ts = new EstateAgent(rs.getInt("id"), rs.getString("name"), rs.getString("address"), rs.getString("login"), rs.getString("password"));
+                rsList.add(ts);
+            }
+            rs.close();
+            pstmt.close();
+            return rsList;
         } catch (SQLException e) {
             e.printStackTrace();
         }
