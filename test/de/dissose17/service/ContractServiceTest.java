@@ -40,7 +40,7 @@ public class ContractServiceTest extends DBTest
 
         estateService = new EstateService(estateAgentService);
         house = estateService.createHouse("Hamburg", 22417, "Kielort", 80, 50, agent, 3, 850, true);
-        apartment = estateService.createApartment("Hamburg", 22417, "Kielort", 80, 50, agent, 3, 800, 5, false, true);;
+        apartment = estateService.createApartment("Hamburg", 22417, "Kielort", 80, 50, agent, 3, 800, 5, false, true);
 
         service = new ContractService(estateService);
         person = service.addPerson("Han", "Mueller", "Kiwi");

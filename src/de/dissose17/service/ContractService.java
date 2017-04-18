@@ -75,6 +75,23 @@ public class ContractService
         return p;
     }
 
+    public List<Person> getAllPerson(){
+        PreparedStatement st = null;
+        List<Person> p = new ArrayList<Person>();
+        try {
+            st = conn.prepareStatement("SELECT * FROM person");
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                p.add(new Person(rs.getInt("Id"), rs.getString("firstname"), rs.getString("name"), rs.getString("address")));
+            }
+            rs.close();
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
+
     /**
      * Create a new purchase contract
      *

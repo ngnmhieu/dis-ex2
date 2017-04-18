@@ -112,6 +112,28 @@ public class EstateService
         return houses;
     }
 
+    public Vector<House> getAllHouses(){
+        Vector<House> houses= new Vector<>();
+        try {
+            String selectSQL = "SELECT * FROM house H, estate E WHERE H.ID = E.ID";
+            PreparedStatement stmt = conn.prepareStatement(selectSQL);
+            //stmt.setInt(1, id);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                int agentID = rs.getInt("agentID");
+                EstateAgent agent = estateAgentService.getEstateAgent(agentID);
+                houses.add(new House(rs.getInt("Id"), rs.getString("city"), rs.getInt("postalcode"), rs.getString("street"), rs.getInt("streetnumber"),
+                        rs.getInt("squarearea"), agent, rs.getInt("floors"), rs.getDouble("price"), rs.getBoolean("garden")));
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return houses;
+    }
+
     /**
      * @param house
      * @return
@@ -285,6 +307,30 @@ public class EstateService
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
+                EstateAgent agent = estateAgentService.getEstateAgent(agentID);
+                apartments.add(new Apartment(rs.getInt("Id"), rs.getString("city"), rs.getInt("postalcode"), rs.getString("street"), rs.getInt("streetnumber"),
+                        rs.getInt("squarearea"), agent, rs.getInt("floor"), rs.getDouble("rent"), rs.getInt("rooms"), rs.getBoolean("balcony"),
+                        rs.getBoolean("builtinkitchen")));
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return apartments;
+    }
+
+    public Vector<Apartment> getAllApartments()
+    {
+        Vector<Apartment> apartments = new Vector<>();
+        try {
+            String selectSQL = "SELECT * FROM apartment A, estate E WHERE A.ID = E.ID";
+            PreparedStatement stmt = conn.prepareStatement(selectSQL);
+            //stmt.setInt(1, id);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                int agentID = rs.getInt("agentID");
                 EstateAgent agent = estateAgentService.getEstateAgent(agentID);
                 apartments.add(new Apartment(rs.getInt("Id"), rs.getString("city"), rs.getInt("postalcode"), rs.getString("street"), rs.getInt("streetnumber"),
                         rs.getInt("squarearea"), agent, rs.getInt("floor"), rs.getDouble("rent"), rs.getInt("rooms"), rs.getBoolean("balcony"),
