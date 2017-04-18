@@ -1,5 +1,8 @@
 package de.dissose17;
 
+import de.dissose17.service.EstateAgentService;
+import de.dissose17.service.EstateService;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -12,8 +15,12 @@ public class Application {
     private JButton estatesButton;
     private JButton contractsButton;
     private JPanel Panel;
+    public EstateAgentService EAService;
+    public EstateService EService;
 
     public Application() {
+        EAService = new EstateAgentService();
+        EService = new EstateService(EAService);
         estateAgentButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
@@ -25,6 +32,7 @@ public class Application {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
+                showAgentLogin();
             }
         });
         contractsButton.addMouseListener(new MouseAdapter() {
@@ -35,11 +43,14 @@ public class Application {
         });
     }
 
-    public void showEstateAgentView(){
-
-    }
     public void showLogin(){
-        Login dialog = new Login();
+        Login dialog = new Login(EAService, EService);
+        dialog.pack();
+        dialog.setVisible(true);
+    }
+
+    public void showAgentLogin(){
+        AgentLogin dialog = new AgentLogin(EAService, EService);
         dialog.pack();
         dialog.setVisible(true);
     }

@@ -33,7 +33,8 @@ public class EstateAgentView {
 
     private EstateAgentService EAService;
 
-    public EstateAgentView() {
+    public EstateAgentView(EstateAgentService ea) {
+        EAService = ea;
         JFrame frame = new JFrame("EstateAgentView");
         frame.setContentPane(this.panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +44,7 @@ public class EstateAgentView {
             @Override
             public void mouseClicked(MouseEvent mouseEvent) {
                 super.mouseClicked(mouseEvent);
-                EAService.createAccount(nameTextField.getText(), adressTextField.getText(), loginTextField.getText(), passwordPasswordField.getPassword().toString());
+                EAService.createAccount(nameTextField.getText(), adressTextField.getText(), loginTextField.getText(), new String(passwordPasswordField.getPassword()));
                 addDatatoTable(table1);
             }
         });
@@ -81,8 +82,6 @@ public class EstateAgentView {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        EAService = new EstateAgentService();
-        //Vector<EstateAgent> es = EAService.getAllEstateAgent();
         Vector<String> cols = new Vector<>();
         cols.add("ID");
         cols.add("Name");

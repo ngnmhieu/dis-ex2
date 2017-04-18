@@ -7,19 +7,18 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.Arrays;
 
-public class Login extends JDialog {
+public class AgentLogin extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField usernameTextField;
     private JPasswordField passwordPasswordField;
-    private char[] password;
     private EstateAgentService EAService;
     private EstateService EService;
 
-    public Login(EstateAgentService EAService, EstateService EService) {
-        this.EAService = EAService;
-        this.EService = EService;
-        password = "test".toCharArray();
+    public AgentLogin(EstateAgentService ea, EstateService es) {
+        this.EAService = ea;
+        this.EService = es;
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -53,23 +52,26 @@ public class Login extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
-        if(Arrays.equals(this.password, passwordPasswordField.getPassword())) {
+        EstateAgentService EAService = new EstateAgentService();
+        System.out.println(usernameTextField.getText());
+        System.out.println(new String(passwordPasswordField.getPassword()));
+        boolean auth = EAService.authenticate(usernameTextField.getText(), new String(passwordPasswordField.getPassword()));
+        if(auth) {
             System.out.println("Login successful!");
             dispose();
-            showEstateAgentView(EAService);
+            showEstateView(EAService, EService);
 
         } else {
             System.out.println("wrong pw");
         }
     }
 
-    public void showEstateAgentView(EstateAgentService ea){
-        new EstateAgentView(ea);
-    }
     private void onCancel() {
         // add your code here if necessary
         dispose();
     }
 
+    public void showEstateView(EstateAgentService ea, EstateService es){
+        new EstateView(ea, es);
+    }
 }
